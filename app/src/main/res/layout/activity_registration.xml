@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#303F9F"
+    tools:context=".Registration">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.Toolbar
+
+            android:id="@+id/toolbar_reg"
+            android:layout_width="match_parent"
+            android:background="@color/colorAccent"
+            app:title="Borak ERP"
+
+            app:titleTextColor="#fff"
+            android:layout_height="wrap_content">
+
+        </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_marginTop="100dp"
+        android:textStyle="bold|italic"
+        android:text="Sign Up"
+        android:textAlignment="center"
+        android:textSize="30dp"
+        android:padding="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textColor="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/rcname"
+        android:layout_marginTop="50dp"
+        android:textStyle="bold|italic"
+        android:hint="Client Name"
+        android:textColorHint="#fff"
+
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textColor="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:id="@+id/rcuser"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold|italic"
+        android:hint="Username"
+        android:textColorHint="#fff"
+
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textColor="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <EditText
+        android:layout_marginTop="20dp"
+        android:textStyle="bold|italic"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:textColorHint="#fff"
+        android:id="@+id/rcpass"
+        android:textSize="20dp"
+        android:padding="10dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textColor="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+           android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+
+                android:layout_marginLeft="8dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textSize="18dp"
+                android:text="Status"
+                android:textColor="#fff"
+                android:layout_weight="2"/>
+            <Spinner
+
+                android:id="@+id/spinner_status"
+                android:background="#fff"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:layout_weight="2">
+
+            </Spinner>
+
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:background="#fff"
+            android:text="Sign Up"
+            android:id="@+id/usersignup"
+            android:padding="5dp"
+            android:textSize="30dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+      <LinearLayout
+          android:layout_margin="7dp"
+          android:orientation="vertical"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content">
+          <LinearLayout
+
+              android:layout_marginTop="40dp"
+              android:layout_marginLeft="15dp"
+              android:layout_marginRight="15dp"
+              android:orientation="horizontal"
+              android:background="#FFCDD2"
+              android:weightSum="3"
+              android:gravity="center"
+              android:layout_width="match_parent"
+              android:layout_height="50dp">
+              <TextView
+                  android:textColor="#212121"
+                  android:textStyle="bold|italic"
+                  android:textSize="16dp"
+                  android:padding="2dp"
+                  android:gravity="center"
+                  android:layout_weight="1"
+                  android:text="Client Id"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content" />
+              <TextView
+                  android:textColor="#212121"
+                  android:textStyle="bold|italic"
+                  android:textSize="16dp"
+                  android:padding="2dp"
+                  android:gravity="center"
+                  android:text="Client"
+                  android:layout_weight="1"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content" />
+              <TextView
+                  android:textColor="#212121"
+                  android:textStyle="bold|italic"
+
+                  android:textSize="16dp"
+                  android:padding="2dp"
+                  android:gravity="center"
+                  android:text="Name"
+                  android:layout_weight="1"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content" />
+
+
+
+          </LinearLayout>
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="300dp">
+          <RelativeLayout
+
+              android:layout_width="match_parent"
+              android:layout_height="match_parent">
+
+
+              <androidx.recyclerview.widget.RecyclerView
+                  android:layout_marginLeft="10dp"
+                  android:layout_marginRight="10dp"
+                  android:id="@+id/itemshowrecyclerview"
+
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+
+              </androidx.recyclerview.widget.RecyclerView>
+              <ProgressBar
+                  android:id="@+id/itemprogress"
+                  android:layout_centerHorizontal="true"
+                  android:layout_centerVertical="true"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content" />
+          </RelativeLayout>
+
+          </LinearLayout>
+
+      </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.core.widget.NestedScrollView>
